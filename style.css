@@ -1,0 +1,376 @@
+:root{
+  --primary-color: #F36E21;
+  --dark-color: #171717;
+  --light-color: #f4f4f4;
+  --background-color: #FFF
+
+}
+
+/* Reset */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  
+  /* Global styles */
+  body {
+    background-color: var(--background-color);
+    font-family: 'B612', sans-serif;
+    /* display: flex;
+    justify-content: center; */
+  }
+
+  h1, h2, h3 {
+    font-family: 'B612', sans-serif;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+/* Navbar styles */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  
+}
+
+#logo img {
+  height: 40px;
+  /* se você quiser um espaço à direita do logo */
+  margin-right: 15px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark-color);
+  padding: 8px 16px;
+  font-family: 'Mona Sans', sans-serif;
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4;
+  background-color: var(--dark-color);
+  border-radius: 4px;
+}
+
+  
+/* Hero section styles */
+#hero .hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  padding: 0% 10% 0%;
+  animation: fadeIn 0.5s;
+}
+
+#hero .text-content {
+  flex: 1;
+  padding-right: 10%;
+}
+
+#hero .img-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+#hero img {
+  max-width: 80%; /* Reduz o tamanho da imagem para 80% do container */
+  object-fit: cover;
+}
+
+
+.cta-button {
+  font-family: 'Mona Sans', sans-serif;
+  font-size: 1.15em;
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 0px 10px;
+  transition: 0.5s ease;
+}
+
+.cta-button a{
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.cta-button:hover{
+  text-decoration: underline;
+}
+
+.cta-button a.cta-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+#cta-link{
+  color: var(--primary-color);
+}
+
+.cta-button a#cta-link::after {
+  color: var(--primary-color);
+  content: "\2192";
+  margin-left: 5px;
+}
+
+.down-button {
+  margin-top: 10px;
+  font-family: 'Mona Sans', sans-serif;
+  font-size: 1.05em;
+  background: transparent;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px 10px;
+  border-radius: 1.5rem;
+}
+
+.down-button:hover{
+  text-decoration: underline;
+}
+
+.down-button a{
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+  
+/* Products section styles */
+#products {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os produtos se alinhem de acordo com o espaço disponível */
+    justify-content: space-around;  /* Distribui os produtos igualmente */
+    padding: 0 5% 0;
+  }
+  
+  .product {
+    flex-grow: 1;  /* Permite que cada produto cresça para preencher o espaço disponível */
+    flex-basis: calc(20% - 2em);  /* Define um tamanho base mínimo; ajuste conforme necessário */
+    margin: 1em;
+    display: flex;
+    flex-direction: column;  /* Agora a imagem estará em cima e o texto embaixo dentro de cada produto */
+    /* align-items: center; */
+    justify-content: center;
+    padding: 3% 5% 3%;
+  }
+  
+  .product img {
+    max-width: 100%;  /* Ajuste conforme necessário */
+    object-fit: cover;
+    margin-bottom: 1em;
+    padding: 0 25% 15% 25%;
+  }
+
+
+/* CTA section styles */
+#CTA {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 0;
+  width: 100%;
+  animation: fadeIn 0.85s;
+}
+
+#CTA img {
+  flex-basis: 50%;  /* Ocupa 50% do espaço inicialmente */
+  max-width: 50%;   /* Não permite que cresça mais que 50% */
+  object-fit: cover; /* Preenche o espaço reservado */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.CTA-content {
+  flex-basis: 50%;  /* Ocupa 50% do espaço inicialmente */
+  max-width: 50%;   /* Não permite que cresça mais que 50% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5%;
+  margin-right: 10%;
+}
+
+.cta-links{
+  margin-top: 1.25em;
+  margin-bottom: 1em;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.cta-links i{
+  color: var(--primary-color);
+}
+
+.cta-links a{
+  text-decoration: none;
+  color: inherit;
+  /* position: absolute; */
+  margin-right: 2%;
+}
+
+.cta-links a:hover{
+  text-decoration: underline;
+}
+
+/* Estilo geral da seção de produtos */
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: start;
+  height: 50vh;
+  margin: 20px 0;
+  /* padding: 8% 8% 8%; */
+  padding: 0% 8% 0%;
+  animation: fadeIn 0.75s;
+}
+
+/* Estilo para a imagem do produto */
+.product-img {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center;     /* Centraliza a imagem verticalmente */
+}
+
+.product-section h4{
+  margin-left: 1rem;
+}
+
+.title-product {
+  display: flex;
+  align-items: baseline; /* Alinha os itens pela linha de base do texto */
+}
+
+
+.product-img img {
+  width: 60%;  /* Reduz o tamanho da imagem para 80% do seu tamanho original */
+  object-fit: cover;
+  padding-bottom: 2%;
+}
+
+/* Estilo para o conteúdo textual do produto */
+.product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-content button{
+  align-self: flex-end; /* Alinha o botão à direita */
+  margin-top: 25px; /* Empurra o botão para baixo */
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #hero .hero-content {
+    flex-direction: column-reverse;
+    padding: 1% 5% 15%;
+  }
+
+  #hero .img-container {
+    flex-basis: 50%; 
+    min-height: 200px; /* altura mínima */
+  }
+
+  #hero img {
+    max-width: 80%; 
+    height: auto;
+    min-height: 300px; /* altura mínima */
+    object-fit: contain;
+  }
+
+  #CTA {
+    flex-direction: column-reverse;
+  }
+  
+  #CTA img {
+    max-width: 100%;
+    flex: auto;
+  }
+
+  .CTA-content {
+    width: auto;
+    padding: 8rem 1rem 5rem 8rem;
+  }
+
+  #products {
+    flex-direction: column;
+  }
+
+  .product {
+    min-width: 100%;
+  }
+
+  .product-section {
+
+    padding: 8% 8% 8%;
+
+  
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
