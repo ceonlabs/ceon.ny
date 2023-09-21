@@ -344,8 +344,8 @@ nav ul li a:hover {
   }
 
   .CTA-content {
-    width: auto;
-    padding: 8rem 1rem 5rem 8rem;
+    max-width: 100%;
+    padding: 2rem 1rem 1rem 4rem;
   }
 
   #products {
@@ -356,11 +356,28 @@ nav ul li a:hover {
     min-width: 100%;
   }
 
+  /* Altera o grid da seção de produtos para uma única coluna */
   .product-section {
+    grid-template-columns: 1fr;
+    height: auto; /* Para permitir que a seção se ajuste ao conteúdo */
+  }
 
-    padding: 8% 8% 8%;
+  /* Faz a imagem e o conteúdo do produto ocuparem 100% da largura */
+  .product-img img, .product-content {
+    width: 100%;
+    padding: 0;
+  }
 
-  
+  /* Remove o padding-bottom da imagem para evitar espaçamento extra */
+  .product-img img {
+    width: 70%;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+
+  /* Opcional: ajusta margens e paddings conforme necessário */
+  .product-section {
+    padding: 4% 8%; /* Ajuste esses valores conforme o desejado */
   }
 }
 
