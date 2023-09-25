@@ -215,7 +215,7 @@ nav ul li a:hover {
 
 
 /* CTA section styles */
-#CTA {
+.CTA {
   display: flex;
   flex-direction: row;
   background-color: var(--dark-color);
@@ -225,7 +225,7 @@ nav ul li a:hover {
   animation: fadeIn 0.85s;
 }
 
-#CTA img {
+.CTA img {
   flex-basis: 50%;  /* Ocupa 50% do espaço inicialmente */
   max-width: 50%;   /* Não permite que cresça mais que 50% */
   object-fit: cover; /* Preenche o espaço reservado */
@@ -334,11 +334,11 @@ nav ul li a:hover {
     object-fit: contain;
   }
 
-  #CTA {
+  .CTA {
     flex-direction: column-reverse;
   }
   
-  #CTA img {
+  .CTA img {
     max-width: 100%;
     flex: auto;
   }
